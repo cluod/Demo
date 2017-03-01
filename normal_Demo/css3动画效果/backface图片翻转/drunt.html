@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片旋转</title>
+	<style type="text/css">
+.box{
+	width: 200px;
+	height: 100px;
+	perspective:500px;
+	-webkit-perspective:500px;
+	-o-perspective:500px;
+	-moz-perspective:500px;
+	margin: 0 auto;
+	}
+	.a1{
+		width:224px;
+		height: 224px;
+		position: relative;
+
+		
+	}
+	.drunt{
+		position: absolute;
+		animation: round 2s infinite;
+
+	}
+.one{
+	z-index: 3;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+
+}
+@keyframes round {
+	from {
+		transform: rotateY(0);
+	}
+	to {
+        transform: rotateY(360deg);
+	}
+}
+@-webkit-keyframes round {
+	from {
+		-webkit-transform: rotateY(0);
+	}
+	to {
+        -webkit-transform: rotateY(360deg);
+	}
+}
+
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<div class="a1">
+			<img class="drunt one" src="images/donutfront.svg">
+			<img class="drunt" src="images/donutback.svg">
+		</div>
+	</div>
+</body>
+</html>

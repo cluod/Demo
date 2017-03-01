@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标划过字体背景颜色变换</title>
+	<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: gray;
+}
+.box{
+width: 500px;
+height: 100px;
+margin: 50px auto;
+border-left:20px solid #000; 
+background: white;
+overflow: hidden;
+
+}
+h1,h2{
+	text-align: center;
+}
+h1{
+	margin-top: 20px;
+}
+.box:hover{
+border-left:20px solid red; 
+background: black;
+color: white;
+}
+.box:hover h1{
+font-size: 14px;
+margin-top: 30px;
+}
+.box:hover h2{
+font-size: 50px;
+}
+
+
+
+	</style>
+</head>
+<body>
+<div class="box">
+	<h1>css测试1</h1>
+	<h2>css测试2</h2>
+</div>
+</body>
+</html>

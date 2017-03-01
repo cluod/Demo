@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>蓝PI蚂蚁气象数据可视化展示系统</title>
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/p_index.css">
+	</head>
+	<body css="reset p_index" class="">
+		<!-- <tmpl hidden> -->
+			<div class="main br5">
+				<div class="star_wrap"></div>
+                <div class="title_top"></div>
+				<div class="layout">
+					<div class="layout_left">
+						<div class="box box_conrec_right">
+							<border class="left_top"></border>
+							<border class="left"></border>
+							<border class="left_bottom"></border>
+							<border class="bottom"></border>
+							<border class="right_bottom"></border>
+							<border class="right"></border>
+							<border class="right_top"></border>
+							<border class="top"></border>
+							<flag class="left"></flag>
+							<flag class="right"></flag>
+							<div class="content">
+								<div class="title">温度</div>
+								<span class="tip_temperature">6.8°C</span>
+								<div class="chart_wrap chart_temperature"></div>
+							</div>
+						</div>
+						<div class="box box_conrec_right">
+							<border class="left_top"></border>
+							<border class="left"></border>
+							<border class="left_bottom"></border>
+							<border class="bottom"></border>
+							<border class="right_bottom"></border>
+							<border class="right"></border>
+							<border class="right_top"></border>
+							<border class="top"></border>
+							<flag class="left"></flag>
+							<flag class="right"></flag>
+							<div class="content">
+								<div class="title">降水</div>
+								<span class="tip_rain">10mm</span>
+								<div class="chart_wrap chart_rain"></div>
+							</div>
+						</div>
+						<div class="box box_conrec_right">
+							<border class="left_top"></border>
+							<border class="left"></border>
+							<border class="left_bottom"></border>
+							<border class="bottom"></border>
+							<border class="right_bottom"></border>
+							<border class="right"></border>
+							<border class="right_top"></border>
+							<border class="top"></border>
+							<flag class="left"></flag>
+							<flag class="right"></flag>
+							<div class="content">
+								<div class="title">能见度</div>
+								<div class="chart_wrap chart_visibility">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layout_center">
+						<div class="layout_center_map">
+							<div class="tip_map"></div>
+							<div class="chart_wrap chart_map"></div>
+						</div>
+						<div class="layout_center_bottom">
+							<div class="box_bottom center_small">
+								<border class="left_top"></border>
+								<border class="left_bottom"></border>
+								<border class="right_top"></border>
+								<border class="right_bottom"></border>
+								<border class="top"></border>
+								<border class="bottom"></border>
+								<bgimg></bgimg>
+								<div class="chart_wrap chart_observe">
+									<icon class="fl">
+										<img src="img/index/weather/00.png"/>
+									</icon>
+									<div class="fr info">
+										<info>6.8°C</info>
+										<desc>晴转多云</desc>
+									</div>
+								</div>
+							</div>
+							<div class="box_bottom center_big">
+								<border class="left_top"></border>
+								<border class="left_bottom"></border>
+								<border class="right_top"></border>
+								<border class="right_bottom"></border>
+								<border class="top"></border>
+								<border class="bottom"></border>
+								<bgimg></bgimg>
+								<div class="chart_wrap chart_forcast">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layout_right">
+						<div class="box box_conrec_left">
+							<border class="left_top"></border>
+							<border class="left"></border>
+							<border class="left_bottom"></border>
+							<border class="bottom"></border>
+							<border class="right_bottom"></border>
+							<border class="right"></border>
+							<border class="right_top"></border>
+							<border class="top"></border>
+							<flag class="left"></flag>
+							<flag class="right"></flag>
+							<div class="content">
+								<div class="title">风力风向</div>
+								<span class="tip_wind">2级</span>
+								<div class="chart_wrap chart_wind"></div>
+							</div>
+						</div>
+						<div class="box box_conrec_left">
+							<border class="left_top"></border>
+							<border class="left"></border>
+							<border class="left_bottom"></border>
+							<border class="bottom"></border>
+							<border class="right_bottom"></border>
+							<border class="right"></border>
+							<border class="right_top"></border>
+							<border class="top"></border>
+							<flag class="left"></flag>
+							<flag class="right"></flag>
+							<div class="content">
+								<div class="title">相对湿度</div>
+								<span class="tip_humidity">30%</span>
+								<div class="chart_wrap chart_humidity"></div>
+							</div>
+						</div>
+						<div class="box box_conrec_left">
+							<border class="left_top"></border>
+							<border class="left"></border>
+							<border class="left_bottom"></border>
+							<border class="bottom"></border>
+							<border class="right_bottom"></border>
+							<border class="right"></border>
+							<border class="right_top"></border>
+							<border class="top"></border>
+							<flag class="left"></flag>
+							<flag class="right"></flag>
+							<div class="content">
+								<div class="title">气压</div>
+								<span class="tip_pressure">265</span>
+								<div class="chart_wrap chart_pressure"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_close"></div>
+				<div class="logo_qrcode">
+					<img src="img/index/logo.png" class="logo"/>
+					<div class="qrcode_wrap">
+						<div class="qrcode"></div>
+					</div>
+				</div>
+                <!--<div class="box box_right"></div>-->
+				<!--<div class="tip_dialog">切换城市关键字</div>-->
+				<a href="db.html"  class="nav-left"></a>
+				<a href="api.html" class="nav-right"></a>
+			</div>
+			<!--<video src="./img/index/start.mp4" autoplay></video>-->
+
+		<script>
+		require('./action/core')
+		</script>
+		<!-- </tmpl> -->
+	</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="small_windmill.css">
+	<title>小风车网站的导航和轮播</title>
+</head>
+<body>
+	!--头部 开始-->
+<div id="header">
+    <!--顶部bar 开始-->
+    <div class="nav_topbar">
+        <div class="nav_topbar_cont">
+            <ul>
+            	<li><a href="">我的主页</a></li><li><a href="">个人中心</a></li><li><a href="">帮助中心</a></li>
+            </ul>
+            <!--用户登录-->
+            <a class="user_login" href="javascript:;"><em></em>用户登录<i class="arrow"></i></a>
+            <div style="display:none;" class="user_login_box"> 
+                <p class="shadow_cover"></p>
+                <div class="user_login_inner">
+                    <form class="signin_form"> 
+                        <input class="ipt" type="text" value="用户名" name="log"/> 
+                        <input class="ipt" type="password" value="密码" name="pwd"/> 
+                        <input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox"/>记住密码
+                        <input class="login_btn" type="submit" name="submit" value="登录"/>
+                    </form>
+                    <p> 
+                        <a href=""><i class="sign"></i>注册</a> | 
+                        <a href=""><i class="lock"></i>忘记密码？</a>
+                    </p>
+                </div>
+            </div>
+            <!--用户登录-->
+        </div>
+    </div>
+    <!--顶部bar 结束-->
+  	<!--头部导航 开始-->
+    <div id="headCont">
+        <div class="main_nav">
+			<!--LOGO-->
+            <div class="logo"><a href=""><img src="images/logo.png" width="60" height="60" alt="logo"/></a></div>
+            <div class="logoName">
+            	<a href=""><img src="images/logoName.png" width="120" height="60" alt="logoName"/></a>
+            </div>
+            <!--主导航-->
+            <ul class="navigation" id="main_nav">
+            <li><a class="on" href="#"><span>音乐馆</span><span class="child-2">音乐馆</span></a></li>
+            <li><a href="Category.html" target="_blank"><span>MV</span><span class="child-2">MV</span></a></li>
+            <li><a href="Category-3.html"><span>我的音乐</span><span class="child-2">我的音乐</span></a></li>
+            <li><a href="#"><span>下载客户端</span><span class="child-2">下载客户端</span></a></li>
+            <p class="nav_bg"></p>
+            </ul>
+            <div class="user_info">
+				<div class="user_photo"><a href=""><img src="images/user_photo.png" /></a></div>
+                <a class="nikeName" href="">無時不刻</a>
+                <a class="user_info_list" href=""><span>8</span><span>歌单</span></a>
+                <a class="user_info_list" href=""><span>3</span><span>收听</span></a>
+                <a class="user_info_list" href=""><span>0</span><span>听众</span></a>
+            </div>
+        </div>
+    	<!--二级导航-->
+        <div class="sub_nav">
+            <div class="nav_list">
+                <ul>
+                    <li>
+                    	<a href="" class="smallogo">
+                        	<span class="mini_logo"></span>
+                        </a>
+                    </li>
+                    <li><a href="" class="home">首页</a></li>
+                    
+                    <div class="sub_list">
+                        <p class="active">
+                        	<a href="javascript:;">排行榜</a><a href="javascript:;">歌手</a>
+                            <a href="javascript:;">专辑</a><a href="javascript:;">电台</a>
+                        </p>
+                        <p>
+                        	<a href="javascript:;">MV推荐</a><a href="javascript:;">MV库</a>
+                            <a href="javascript:;">MV主题</a><a href="javascript:;">音乐现场</a>
+                        </p>
+                        <p>
+                        	<a href="javascript:;">主页</a><a href="javascript:;">歌单</a>
+                            <a href="javascript:;">MV收藏</a><a href="javascript:;">听众</a>
+                            <a href="javascript:;">收听</a>
+                        </p>
+                        <p>
+                        	<a href="javascript:;">电脑版本</a><a href="javascript:;">pad版本</a>
+                            <a href="javascript:;">手机版本</a>
+                        </p>
+                    </div>
+                    
+                    <!--搜索框 开始-->
+                    <div class="search_box">
+                        <input type="button" class="search_btn" />
+                        <input type="text" class="search" value="搜索好音乐" />
+                        <!--搜索下拉菜单-->
+                        <div class="hot_search">
+                            <div>
+                                <span><a href="javascript:;">陈奕迅</a><font>171万</font></span>
+                                <div>
+                                    <span><a href="javascript:;">周杰伦</a><font>164万</font></span>
+                                    <div>
+                                        <span><a href="javascript:;">G.E.M. 邓紫棋</a><font>107万</font></span>
+                                        <div>
+                                            <span><a href="javascript:;">泡沫</a><font>90万</font></span>
+                                            <div>
+                                                <span><a href="javascript:;">林俊杰</a><font>62万</font></span>
+                                                <div>
+                                                    <span><a href="javascript:;">本兮</a><font>57万</font></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>             
+                        </div>
+                        <!--搜索下拉菜单-->        
+                    </div>
+                    <!--搜索框 结束-->
+                </ul>
+            </div>
+        </div>
+    </div>
+  	<!--头部导航  结束-->
+</div>
+<!--头部 结束-->
+<!--轮播图 开始 -->
+<div class="main_banner">
+	<div class="main_banner_bg"></div>
+    <div class="main_banner_wrap">
+        <div class="main_banner_box" id="m_box">
+            <a href="javascript:void(0)" class="banner_btn js_pre">
+            	<span class="banner_btn_arrow"><i></i></span>
+            </a>
+            <a href="javascript:void(0)" class="banner_btn btn_next js_next">
+            	<span class="banner_btn_arrow"><i></i></span>
+            </a>
+            <ul>
+                <li id="imgCard0">
+                    <a href="" target="_blank"><span style="opacity:0;"></span></a>      
+                    <img src="images/big0120150101183428.jpg" alt="">
+                    <p style="bottom:0">周杰伦粉丝版MV</p>
+                </li> 
+                <li id="imgCard1">
+                    <a href="" target="_blank"><span style="opacity:0.4;"></span></a>      
+                    <img src="images/big0320150101183351.jpg" alt="">
+                    <p>乐侃有声节目第二期</p>
+                </li> 
+                <li id="imgCard2">
+                    <a href="" target="_blank"><span style="opacity:0.4;" ></span></a>        
+                    <img src="images/big0020150102211033.jpg" alt="">
+                    <p>乐见大牌：”荣“耀之声，”维“我独尊</p>
+                </li> 
+                <li id="imgCard3">
+                    <a href="" target="_blank"><span style="opacity:0.4;"></span></a>      
+                    <img src="images/big0420150101224343.jpg" alt="">
+                    <p>王力宏四年心血结晶</p>
+                </li> 
+                <li id="imgCard4">
+                    <a href="" target="_blank"><span style="opacity:0.4;"></span></a>      
+                    <img src="images/big0720150102210934.jpg" alt="">
+                    <p>MV精选：《武媚》女神团美艳大比拼</p>
+                </li> 
+            </ul>
+            <!--火狐倒影图层-->
+            <p id="rflt"></p>
+            <!--火狐倒影图层-->
+        </div>
+        <!--序列号按钮-->
+        <div class="btn_list">
+        	<span class="curr"></span><span></span><span></span><span></span><span></span>        
+        </div>
+    </div>
+</div>
+<!--轮播图 结束 -->
+<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="small_windmill.js"></script>
+</body>
+</html>

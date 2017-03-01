@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>蓝PI蚂蚁气象数据可视化展示系统</title>
+   <!--  <script>window.$ = window.jQuery = require('./action/lib/j.js');</script> -->
+</head>
+<body css="reset p_db" class="frameless shadow">
+<div class="main br5">
+<!-- 折线 -->
+<img src="img/db/arr/zi_jt.png" class="zi_jt1">
+<img src="img/db/arr/zi_jt.png" class="zi_jt2">
+<img src="img/db/arr/lan_jt.png" class="lan1_jt1">
+<img src="img/db/arr/lan_jt.png" class="lan2_jt2">
+    <div class="f_line">
+        <img src="img/db/arr/lv_jt.png" class="lv_jt">
+        <img src="img/db/arr/lv_jt.png" class="lv_jt lv_jt1">
+    </div>
+    <div class="t_line">
+         <img src="img/db/arr/lv_jt.png" class="lv_jt">
+         <img src="img/db/arr/lv_jt.png" class="lv_jt lv_jt1">
+    </div>
+    <div class="tr_line">
+    </div>
+    <div class="tr_line1"></div>
+    <div class="fi_line"></div>
+    <div class="fi_line1"></div>
+<!-- 信息弹出框 -->
+    <div class ='info'>
+     <img src="img/db/serdb_logo.png" class="imgdb_logo" / >
+      <div class="db_ip">服务器IP：61.4.195.12</div>
+       <div class="ip_syl">
+            <div class = "syl_title">CPU使用率:</div>
+            <div class="syl_img">
+                <div class='syl_rate'></div>
+            </div>
+            <div class="ip_syl_txt"></div>
+        </div>
+        <div class="nc_syl">
+            <div class = "nc_title">内存使用率:</div>
+            <div class="nc_img">
+                <div class='nc_rate'></div>
+            </div>
+            <div class="nc_syl_txt"></div>
+        </div>
+        <div class="nc_yl">内存使用量：300G</div>
+        <div class="nc_zl">内存总量：300G</div>
+        <div class="ph_fz">平衡负载：000.05</div>
+        <div id="chart"></div>
+    </div>
+    <!-- 主界面标题 -->
+    <div class="title_top"></div>
+<!-- 主界面具体内容 -->
+    <div class="layout">
+        <div class="tx_yun yun rad">
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.25.170</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.44.81</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.45.174</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>182.254.135.221</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.29.172</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.17.251</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.44.109</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.20.215</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.25.155</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.50.97</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.51.90</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                <img src="img/db/sm_line.png" class="sm_line">
+                <p>123.206.24.203</p>
+            </div>
+            <img src="img/db/txlogo.png" class="tx_logo">
+            <div class="huanqiu_k">环球气象</div>
+            <div class="hainan_k">
+                <span>海南决策后台</span>
+            </div>
+        </div>
+
+        <div class="al_yun yun rad">
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>112.124.35.90</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>218.244.147.83</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>112.124.11.91</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>115.29.161.191</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>115.29.174.100</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>115.29.190.33</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>120.26.247.194</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>120.26.11.91</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>112.124.16.201</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>112.124.34.76</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <img src="img/db/smeff.png" class="eff">
+                <p>120.26.106.108</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>121.40.115.81</p>
+            </div>
+            <img src="img/db/allogo.png" class="al_logo">
+            <div class="webapi_k k">
+                <span>WEBAPI</span>
+            </div>
+            <div class="geo_k k">
+                <span>GEOAPI</span>
+            </div>
+            <div class="ceshi_k k">
+                <span>测试</span>
+            </div>
+        </div>
+
+        <div class="in_net yun rad">
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.101</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.102</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.103</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.104</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.106</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.113</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.116</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.117</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>10.16.58.118</p>
+            </div>
+            <img src="img/db/innetlogo.png" class="innet_logo">
+        </div>
+
+        <div class="zy dbs rad">
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.171</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>211.99.240.6</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.172</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>211.99.240.5</p>
+                <img src="img/db/faguang.png" class="fg1" /> 
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.122</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.123</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.124</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.150</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.151</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.173</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.174</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.177</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.32</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.33</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.61</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.62</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>211.99.240.4</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.181</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>211.99.240.2</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>211.99.240.3</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.210</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.211</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.212</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.34</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.29</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.31</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.185</p>
+                <p>ftp0.tianqi.cn</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>211.99.240.7</p>
+                <p>ftp1.tianqi.cn</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.180</p>
+                <p>雷达云图</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.175</p>
+                <p>MICAPS数据处理</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.186</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.185.122</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.184</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.184.187</p>
+            </div>
+            <div class="hadoop_k sk">
+                <img  src="img/db/hadoop.png"  />
+            </div>
+            <div class="st_k2 sk">
+                <img  src="img/db/styunbg.png" />
+            </div>
+            <div class="hbase_k sk">
+                <p>HBASE</p>
+            </div>
+            <div class="dbk sk">
+                <p>数据生产机</p>
+            </div>
+            <div class="dck sk">
+                <p>数据生产机</p>
+            </div>
+            <div class="mdk sk">
+                <img  src="img/db/mdk.png" />
+            </div>
+            <div class="mdk2 sk">
+                <p>MYSQL</p>
+            </div>
+            <div class="weixin_k sk">
+                <p>微信预警</p>
+            </div>
+            <div class="scpi_k sk">
+                <p>SCPI</p>
+            </div>
+            <div class="tq">
+                <img src="img/db/tqmc.png" class="mc" />
+                 <p>天气网ORACLE</p>
+                 <img src="img/db/tqfg.png" class="tqfg">
+            </div>
+            <div class="first_line">
+                <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="second_line">
+                 <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="third_line">
+                 <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="four_line">
+                <img class="lan_jt1" src="img/db/arr/lan_jt.png"> 
+                 <img class="lan_jt1 lan_jt2" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="five_line">
+                 <img class="lan_jt5" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="six_line">
+                 <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+             <div class="tq_line">
+                 <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="seven_line">
+                 <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+            <div class="eight_line">
+                 <img class="lan_jt" src="img/db/arr/lan_jt.png"> 
+            </div>
+        </div>
+        
+        <div class="st dbs rad">
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.48</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.49</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.50</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.51</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.52</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.53</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.54</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.55</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.56</p>
+            </div>
+            <div class="net">
+                <img src="img/db/mch.png">
+                <img src="img/db/smeff.png" class="eff">
+                 <img src="img/db/sm_line.png" class="sm_line">
+                <p>61.4.186.57</p>
+            </div>
+            <img src="img/db/styunbg.png" class="styun_logo">
+            <div class="st_k"></div>
+        </div>
+
+    </div>
+
+<a href="api.html"  class="nav-left"></a>
+<a href="weather.html" class="nav-right"></a>
+</div>    
+<script>
+require('./action/core')
+</script>
+</body>
+</html>

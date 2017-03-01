@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易DIV拖拽</title>
+	<style type="text/css">
+	.mydiv{
+		width: 100px;
+		height: 100px;
+		background: red;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div class="mydiv"></div>
+	<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function(){
+	var move =false;
+	var disX, disY;
+	$(".mydiv").mousedown(function(e){
+		move = true;
+		disX = e.pageX - parseInt($(".mydiv").css("left"));
+		disY = e.pageY -  parseInt($(".mydiv").css("top"));
+	});
+		$(document).mousemove(function(e){
+			if(move){
+				var left =e.pageX - disX ;
+				var top =e.pageY - disY ;
+				$(".mydiv").css({
+                 "left" : left,
+                 "top" : top
+				});
+			}
+		}).mouseup(function(){
+			move = false;
+	})
+	     
+})
+	</script>
+</body>
+</html>

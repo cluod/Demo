@@ -1,0 +1,21 @@
+.container{
+	width: 1200px;
+	height: 405px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+	float: left;
+	width: 106px;
+	height: 405px;
+	overflow: hidden;
+	border-left:1px solid #000;
+}
+ul li.first{
+	width: 538px;
+}

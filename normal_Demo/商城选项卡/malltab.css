@@ -1,0 +1,63 @@
+.box{
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+.box div{
+float: left;
+}
+.left{
+	width: 198px;
+	height: 598px;
+	border:1px solid #222;
+}
+.right{
+	width: 798px;
+	height: 598px;
+	border:1px solid #999; 
+}
+.left li{
+list-style: none;
+width: 200px;
+height: 50px;
+font-family: "微软雅黑";
+font-size: 18px;
+text-align: center;
+line-height: 50px;
+border-bottom: 1px solid #151546;
+background: #222;
+margin-top: 20px;
+color: white;
+position: relative;
+}
+.left li img{
+	position: absolute;
+	right: -15px;
+	top: 20px;
+	display: none;
+}
+.left li img.now{
+	display: block;
+}
+.right{
+	background: grey;
+}
+.left .active{
+	background: green;
+}
+.right ul{
+	width: 100%;
+	height: 100%;
+	display: none;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+.right ul.now{
+	display: block;
+}

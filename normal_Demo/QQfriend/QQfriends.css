@@ -1,0 +1,24 @@
+ul ,li{
+	list-style: none;
+}
+.list_container{
+	width: 500px;
+	margin: 0 auto;
+}
+h1{
+	font-size: 16px;
+	background: url("images/ico1.gif") 0 3px no-repeat yellow;
+	padding-left: 15px;
+}
+.list_ul{
+	display: none;
+}
+.listshow{
+	display: block;
+}
+.list_li{
+	background: green;
+}
+.h_bg{
+background: url("images/ico2.gif") 0 3px no-repeat yellow;
+}

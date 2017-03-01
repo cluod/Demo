@@ -1,0 +1,133 @@
+.box {
+	width: 1178px;
+	height: 66px;
+	margin: 50px auto;
+	position: relative;
+	// background: red;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+.logo {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 16px;
+	top: 0px;
+}
+.logo img {
+	width: 60px;
+	height: 60px;
+	animation: my 2s infinite linear;
+	-webkit-animation: my 2s infinite linear;
+	-o-animation: my 2s infinite linear;
+	-moz-animation: my 2s infinite linear;
+}
+@keyframes my {
+	form {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+@-webkit-keyframes my {
+	form {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(-360deg);
+	}
+}
+@-o-keyframes my {
+	form {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(-360deg);
+	}
+}
+@-moz-keyframes my {
+	form {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(-360deg);
+	}
+}
+.logoname {
+	width: 120px;
+	height: 60px;
+	position: absolute;
+	left: 98px;
+	top: 5px;
+}
+.navigation {
+	width: 600px;
+	height: 64px;
+	position: absolute;
+	left: 220px;
+	top: 2px;
+}
+.navigation li {
+	height: 64px;
+	float: left;
+	perspective: 700px;
+	-webkit-prespective: 700px;
+	-o-prespective:700px;
+	-moz-prespective: 700px;
+}
+.navigation li a {
+	position: relative;
+	left: 0;
+	top: 0;
+	line-height: 64px;
+	float: left;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transition: .4s;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	-o-transition: .4s;
+	-moz-transform-origin: center center -32px ;
+	-webkit-transform-origin: center center -32px;
+	-o-transform-origin: center center -32px;
+}
+.navigation li a span {
+	width: 120px;
+	height: 64px;
+	float: left;
+	text-align: center;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+}
+.navigation li a span.child-2 {
+	position: absolute;
+	// display: none;
+	top: -64px;
+	left: 0;
+	color: #FFAE00;
+	font-size: 18px;
+	-webkit-transform-origin:bottom;
+	color: #FFAE00;
+	transform: rotateX(90deg);
+	-webkit-transform: rotateX(90deg);
+	-o-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);
+
+}
+.navigation li a:hover {
+	background: #0eaf52;
+	transform: rotateX(-90deg);
+	-webkit-transform: rotateX(-90deg);
+	-o-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+}
+// rotateY向右旋转为正角度，rotateX向下旋转为正角度，rotateZ顺时针旋转为正角度

@@ -1,0 +1,25 @@
+*{/*通用选择器:选择到所有的元素*/
+			margin:0px;/*外边距*/padding:0px;/*内边距*/
+		}
+		#box{
+		width:940px;/*宽度*//*height:100px;高度*/
+		/*background:#663333;背景颜色*/
+		margin:100px auto;/*上下为100px 左右居中*/
+		}
+		
+		ul li{
+			list-style:none;/*去除前面的实心圆点*/
+			width:288px;height:225px;
+			/*background:red;*/
+			float:left;/*浮动:左浮动*/
+			margin:10px 12px;
+		}
+		.title{
+			width:288px;height:40px;
+			text-align:center;/*文本对齐方式:水平居中*/
+			line-height:40px;/*行高*/
+			box-shadow:0px 0px 10px #000;/*阴影:左右偏移,上下偏移,模糊度,颜色*/
+		}
+		ul li img:hover{/*鼠标悬停在上面实现什么效果*/
+			opacity:0.5;/*透明度:0-1之间*/
+		}

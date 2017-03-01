@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>蓝PI蚂蚁气象数据可视化展示系统</title>
+</head>
+<body css="reset p_api" class="frameless shadow">
+<div class="main br5">
+    <div class="star_wrap"></div>
+    <!-- 主界面标题 -->
+    <div class="title_top"></div>
+<!-- 主界面具体内容 -->
+    <div class="layout">
+    	<div class="left" id="left"></div>
+    	<div class="right" id="right">
+    		<div class="top">
+    			<div class="fwcs">访问次数</div>
+                <div class="number_con">
+                    <ul class="number_c" id="number_c"> 
+                    </ul>
+                </div>
+    		</div>
+    		<div class="middle" id="middle">
+    			
+    		</div>
+    		<div class="bottom" id="bottom">
+    			
+    		</div>
+    	</div>
+       
+    </div>
+
+<a href="weather.html" class="nav-left"></a>
+<a href="db.html"  class="nav-right"></a>
+</div>    
+<script>
+require('./action/core')
+</script> 
+</body>
+</html>

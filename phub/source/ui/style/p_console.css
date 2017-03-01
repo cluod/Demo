@@ -1,0 +1,19 @@
+@-webkit-keyframes rotate{
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+    }
+}
+#text_listence{
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    height: 80%;
+}
+#btnLicence{
+    display: block;
+    margin: 0 auto;
+    padding: 3px 10px;
+}
