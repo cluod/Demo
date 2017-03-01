@@ -1,0 +1,17 @@
+
+<!--pages/searchcity/searchcity.wxml-->
+<view class= "sera">
+<view class = "left"  bindtap="back">
+ <image src="../../img/arrow.png" class = "back"></image>
+</view>
+ 
+  <view class ="border-line"></view>
+  <input type="text" placeholder="搜索城市名" class='secity' bindinput="searchcity" />
+</view>
+
+<view class='city_line'>
+  <view wx:for="{{city_array}}" bindtap="getData" id="{{item.id}}">
+    {{item.mes}}
+  </view>
+</view>
+<image src="../../img/ser.png" class= "ser"></image>

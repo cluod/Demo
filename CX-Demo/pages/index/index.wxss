@@ -1,0 +1,202 @@
+/**index.wxss**/
+
+page {
+  width: 100%;
+  height: 100%;
+  font-family: 'SimHei';
+}
+.bainian {
+  position: fixed;
+  width: 10%;
+  height: 10%;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 1;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.my-swiper {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 10%;
+}
+
+.my-swiper image {
+  width: 70%;
+  height: 68%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+  height: 25px;
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 56%;
+}
+
+.flex-wrp {
+  height: 25px;
+}
+
+.flex-wrp view {
+  width: 33.33%;
+  display: flex;
+  overflow: hidden;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.time {
+  justify-content: center;
+}
+
+.search_btn {
+  width: 15px;
+  height: 15px;
+  margin-right: 30rpx;
+}
+
+.time_line {
+  display: flex;
+  height: 25px;
+  align-content: center;
+  margin-top: 2px;
+}
+
+.time_line view {
+  width: 14.3%;
+  font-size: 30rpx;
+  text-align: center;
+  float: left;
+}
+.f_line {
+  color: rgba(255, 255, 255, 0.6);
+}
+.wea_line {
+  width: 100%;
+  height: 30px;
+  display: flex;
+}
+
+.wea_line view {
+  width: 14.28%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.wea_line view image {
+  width: 25px;
+  height: 25px;
+}
+
+.time_line .fl {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 7px;
+}
+
+@media screen and (width:375px) {
+  .time_line .fl {
+    height: 45px;
+  }
+}
+
+@media screen and (width:320px) {
+  page {
+    background: #e64f4a;
+  }
+}
+
+@media (min-width:319px) and ( max-width:350px) {
+  .time_line .fl {
+    height: 45px;
+  }
+
+  .my-swiper {
+    top: 10%;
+  }
+
+  .my-swiper image {
+    width: 70%;
+    height: 50%;
+  }
+}
+
+@media (min-width:350px) and ( max-width:380px) {
+  .time_line .fl {
+    height: 45px;
+  }
+
+  .my-swiper {
+    top: 9%;
+  }
+
+  .my-swiper image {
+    width: 70%;
+    height: 60%;
+  }
+   .section {
+    top: 57%;
+  }
+}
+
+@media (min-width:380px) and ( max-width:400px) {
+  .time_line .fl {
+    height: 45px;
+  }
+
+  .my-swiper {
+    top: 9%;
+  }
+
+  .my-swiper image {
+    width: 70%;
+    height: 60%;
+  }
+  .section {
+    top: 58%;
+  }
+}
+
+@media (min-width:400px) and ( max-width:430px) {
+  .time_line .fl {
+    height: 45px;
+  }
+
+  .my-swiper {
+    top: 10%;
+  }
+
+  .my-swiper image {
+    width: 70%;
+    height: 65%;
+  }
+
+  .section {
+    top: 60%;
+  }
+}

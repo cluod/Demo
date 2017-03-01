@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/searchcity/searchcity"
+  ],
+  "window":{
+    "backgroundTextStyle":"",
+    "navigationBarBackgroundColor": "#e64f4a",
+    "navigationBarTitleText": "假日天气",
+    "navigationBarTextStyle":"white"
+  }
+}

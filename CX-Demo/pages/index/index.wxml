@@ -1,0 +1,67 @@
+
+<!--index.wxml-->
+<image src="../../img/bainian.jpg" class="bainian" animation="{{animationData}}"></image>
+<view class="container" animation="{{animationData2}}">
+  <image src="{{bgSrc}}" class="bg"></image>
+
+  <!--<swiper class='my-swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>-->
+  <view class="section">
+    <view class='f_line'>
+      <view class="flex-wrp" style="display:flex">
+        <view class="adress_con" style="padding-left:13px;">
+          <image src="../../img/pos.png" style='width:12px;height:15px;opacity:0.6'></image>
+          <text class="adress" style="margin-left:3px">{{address}}</text>
+        </view>
+        <view class="time">{{time}}</view>
+        <view class="search" bindtap="getSearch">
+          <image src="../../img/search_btn.png" class="search_btn" style='width:15px;height:15px;opacity:0.6'></image>
+        </view>
+      </view>
+    </view>
+    <view class='time_line'>
+      <view wx:for="{{data_array}}">
+        {{item.message}}
+      </view>
+    </view>
+    <view class="wea_line">
+      <block>
+        <view wx:for="{{imgUrl}}">
+          <image src="{{item}}"></image>
+        </view>
+      </block>
+    </view>
+    <view class='time_line'>
+      <view wx:for="{{daywea_array}}" style="padding-left:12px;">
+        {{item.mes}}
+      </view>
+    </view>
+    <view class='time_line'>
+      <view wx:for="{{nightwea_array}}" style="padding-left:8px;">
+        {{item.mes}}
+      </view>
+    </view>
+    <view class="wea_line">
+      <block>
+        <view wx:for="{{aqiurl}}">
+          <image src="{{item}}"></image>
+        </view>
+      </block>
+    </view>
+    <view class='time_line'>
+      <view wx:for="{{fl_array}}" class="fl">
+        {{item.mes}}
+      </view>
+    </view>
+    <view class='time_line'>
+      <view wx:for="{{fx_array}}" class="fl" style = "height:28px;">
+        {{item.mes}}
+      </view>
+    </view>
+  </view>
+</view>
