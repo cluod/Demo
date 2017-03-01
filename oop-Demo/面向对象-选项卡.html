@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象选项卡</title>
+	<style type="text/css">
+		.now{background: red}
+		div{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		// window.onload = function () {
+		// 	var aInput = document.getElementsByTagName('input');
+		// 	var aDiv = document.getElementsByTagName('div');
+		// 	for(var i=0;i<aInput.length;i++){
+		// 		aInput[i].index = i;
+		// 		aInput[i].onclick = function () {
+		// 			for(var i = 0;i<aInput.length;i++){
+		// 				aInput[i].className = '';
+		// 				aDiv[i].style.display = 'none';
+		// 			}
+		// 			this.className = 'now';
+		// 			aDiv[this.index].style.display = 'block';
+		// 		}
+		// 	}
+		// }
+		// 变形
+			// 尽量不要出现函数嵌套函数
+			//可以有全局变量
+			//把onload中不是赋值的语句放到单独函数中
+		// var aInpu = null;
+		// var aDiv = null;	
+		// window.onload = function () {
+		// 	aInput = document.getElementsByTagName('input');
+		// 	aDiv = document.getElementsByTagName('div');
+		// 	init();
+
+		// }
+		// function init() {
+		// 	for(var i=0;i<aInput.length;i++){
+		// 		aInput[i].index = i;
+		// 		aInput[i].onclick = inputChage;
+		// 	} 
+		// }
+		// function  inputChage() {
+		// 	for(var i = 0;i<aInput.length;i++){
+		// 		aInput[i].className = '';
+		// 		aDiv[i].style.display = 'none';
+		// 	}
+		// 	this.className = 'now';
+		// 	aDiv[this.index].style.display = 'block';		 
+		// }	
+		// 改变成对象
+			// 全局变量就是属性
+			//函数就是方法
+			//Onload中创建对象
+		window.onload = function () {
+			var t1 = new Tab();
+			t1.init();
+		}
+		function Tab() {
+			this.aInput = document.getElementsByTagName('input');
+			this.aDiv = document.getElementsByTagName('div');
+		}
+		Tab.prototype.init = function(){
+			var This = this;
+			for(var i=0;i<this.aInput.length;i++){
+				this.aInput[i].index = i;
+				this.aInput[i].onclick = function () {
+					This.inputChage(this);
+				};
+			} 
+		};
+		Tab.prototype.inputChage = function(obj){
+			for(var i = 0;i<this.aInput.length;i++){
+				this.aInput[i].className = '';
+				this.aDiv[i].style.display = 'none';
+			}
+			obj.className = 'now';
+			this.aDiv[obj.index].style.display = 'block';
+		};
+	</script>
+</head>
+<body>
+	<input type="button" value="1" class="now" />
+	<input type="button" value="2" />
+	<input type="button" value="3" />
+	<div style="display: block;">1111111111</div>
+	<div>2222222222</div>
+	<div>3333333333</div>
+</body>
+</html>
