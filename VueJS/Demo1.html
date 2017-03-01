@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>vie测试</title>
+	<script src="http://cdn.bootcss.com/vue/2.1.8/vue.js"></script>
+	<style type="text/css">
+		.app{color: red;float: left;}
+	</style>
+</head>
+<body>
+	<div id="el" class="app">{{msg}}</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			el:"#el",
+			data:{
+				msg :"hellow world"
+			}
+		})
+	</script>
+</body>
+</html>

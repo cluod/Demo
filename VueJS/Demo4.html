@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Demo</title>
+		<script src="http://cdn.bootcss.com/vue/2.1.8/vue.js"></script>
+</head>
+<body>
+	<div id="app-4">
+		<ol>
+			<li v-for="to in todos">
+				{{to.txt}}
+			</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		var app4 = new Vue({
+			el:"#app-4",
+			data:{
+				todos:[
+					{
+						txt:"11111111111"
+				},
+					{txt:"22222222222"},
+					{txt:"33333333333"},
+				]
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Demo</title>
+		<script src="http://cdn.bootcss.com/vue/2.1.8/vue.js"></script>
+</head>
+<body>
+	<div id='app-9' @click.ctrl="doSomething">doSomething
+	</div>
+	
+	
+	<script type="text/javascript">
+		
+		var app9 = new Vue({
+			el:"#app-9",
+			data:{
+				ok:false
+			},
+			methods:{
+				doSomething:function () {
+					 alert(1);
+				}
+			}
+		})
+	</script>
+</body>
+</html>
